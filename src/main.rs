@@ -96,7 +96,7 @@ fn main() {
         );
 
     let matches = app.get_matches();
-    match hx::run(matches) {
+    match hx::run(&matches) {
         Ok(_) => {
             process::exit(0);
         }
