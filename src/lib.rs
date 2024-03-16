@@ -97,7 +97,7 @@ impl Page {
 ///
 /// * `b` - offset value.
 pub fn offset(b: u64) -> String {
-    format!("{:#08x}", b)
+    format!("{b:#08x}")
 }
 
 /// print offset to std out
