@@ -44,7 +44,6 @@ impl Format {
                 Self::Binary => format!("{:#010b}", data),
                 _ => panic!("format is not implemented for this Format"),
             }
-            .to_string()
         } else {
             match &self {
                 Self::Octal => format!("{:04o}", data),
@@ -53,7 +52,6 @@ impl Format {
                 Self::Binary => format!("{:08b}", data),
                 _ => panic!("format is not implemented for this Format"),
             }
-            .to_string()
         }
     }
 }
