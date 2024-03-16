@@ -118,7 +118,7 @@ pub fn print_byte(
         // note, for color testing: for (( i = 0; i < 256; i++ )); do echo "$(tput setaf $i)This is ($i) $(tput sgr0)"; done
         let color = byte_to_color(b);
         let string = ansi_term::Style::new().fg(color).paint(fmt_string);
-        write!(w, "{string} ",)
+        write!(w, "{string} ")
     } else {
         write!(w, "{fmt_string} ")
     }
