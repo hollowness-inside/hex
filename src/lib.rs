@@ -163,7 +163,7 @@ pub fn append_ascii(target: &mut Vec<u8>, b: u8, colorize: bool) {
 /// # Arguments
 ///
 /// * `matches` - Argument matches from command line.
-pub fn run(matches: ArgMatches) -> Result<(), Box<dyn Error>> {
+pub fn run(matches: &ArgMatches) -> Result<(), Box<dyn Error>> {
     let mut column_width: u64 = 10;
     let mut truncate_len: u64 = 0x0;
     if let Some(len) = matches.get_one::<String>("func") {
