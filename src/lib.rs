@@ -40,6 +40,7 @@ const ARGS: [&str; 9] = [
     ARG_COL, ARG_LEN, ARG_FMT, ARG_INP, ARG_CLR, ARG_ARR, ARG_FNC, ARG_PLC, ARG_PFX,
 ];
 
+const DBG: bool = false;
 const DBG: u8 = 0x0;
 
 /// Line structure for hex output
@@ -309,13 +310,13 @@ pub fn run(matches: ArgMatches) -> Result<(), Box<dyn Error>> {
 #[allow(clippy::absurd_extreme_comparisons)]
 pub fn is_stdin(matches: &ArgMatches) -> bool {
     if let Some(file) = matches.get_one::<String>(ARG_INP) {
-        if DBG > 0 {
+        if DBG {
             dbg!(file);
         }
 
         return false;
     } else if let Some(nth1) = env::args().nth(1) {
-        if DBG > 0 {
+        if DBG {
             dbg!(nth1);
         }
 
