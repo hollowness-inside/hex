@@ -41,7 +41,6 @@ const ARGS: [&str; 9] = [
 ];
 
 const DBG: bool = false;
-const DBG: u8 = 0x0;
 
 /// Line structure for hex output
 #[derive(Clone, Debug, Default)]
